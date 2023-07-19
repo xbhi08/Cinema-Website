@@ -1,0 +1,182 @@
+CREATE TABLE admin (
+adminID int COLLATE latin1_bin NOT NULL,
+  username varchar(30) COLLATE latin1_bin NOT NULL UNIQUE,
+  password varchar(250) COLLATE latin1_bin NOT NULL,
+  gender varchar(15) COLLATE latin1_bin NOT NULL,
+  address varchar(30) COLLATE latin1_bin NOT NULL,
+  email varchar(100) COLLATE latin1_bin NOT NULL,
+  dateOfBirth date COLLATE latin1_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_bin;
+
+CREATE TABLE customer (
+customerID int COLLATE latin1_bin NOT NULL,
+  username varchar(30) COLLATE latin1_bin NOT NULL UNIQUE,
+  custName varchar(40) COLLATE latin1_bin NOT NULL,
+  password varchar(250) COLLATE latin1_bin NOT NULL,
+  gender varchar(15) COLLATE latin1_bin NOT NULL,
+  address varchar(30) COLLATE latin1_bin NOT NULL,
+  email varchar(100) COLLATE latin1_bin NOT NULL,
+  dateOfBirth date COLLATE latin1_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_bin;
+
+
+CREATE TABLE reviews (
+reviewID int COLLATE latin1_bin NOT NULL,
+customerID int COLLATE latin1_bin NOT NULL,
+showID int COLLATE latin1_bin NOT NULL,
+adminID int COLLATE latin1_bin NOT NULL,
+comment varchar(250) COLLATE latin1_bin NOT NULL,
+rating integer COLLATE latin1_bin NOT NULL,
+banned varchar(5) COLLATE latin1_bin NOT NULL,
+flagged varchar(5) COLLATE latin1_bin NOT NULL,
+date_posted date COLLATE latin1_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_bin;
+
+CREATE TABLE shows (
+adminID int COLLATE latin1_bin NOT NULL,
+showID int COLLATE latin1_bin NOT NULL,
+duration int COLLATE latin1_bin NOT NULL,
+show_name varchar(50) COLLATE latin1_bin NOT NULL,
+show_genre varchar(40) COLLATE latin1_bin NOT NULL,
+language varchar(30) COLLATE latin1_bin NOT NULL,
+country varchar(50) COLLATE latin1_bin NOT NULL,
+release_date date COLLATE latin1_bin NOT NULL,
+director varchar(50) COLLATE latin1_bin NOT NULL,
+production_team varchar(150) COLLATE latin1_bin NOT NULL,
+cast varchar(200) COLLATE latin1_bin NOT NULL,
+start_date date COLLATE latin1_bin NOT NULL,
+end_date date COLLATE latin1_bin NOT NULL,
+imdb_rating float COLLATE latin1_bin NOT NULL,
+quality varchar(10) COLLATE latin1_bin NOT NULL,
+show_desc varchar(200) COLLATE latin1_bin NOT NULL,
+show_url varchar(50) COLLATE latin1_bin NOT NULL,
+trailer_url varchar(50) COLLATE latin1_bin NOT NULL,
+show_year int(4) COLLATE latin1_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_bin;
+
+
+CREATE TABLE movies (
+adminID int COLLATE latin1_bin NOT NULL,
+showID int COLLATE latin1_bin NOT NULL,
+room_no int COLLATE latin1_bin NOT NULL,
+duration int COLLATE latin1_bin NOT NULL,
+show_name varchar(50) COLLATE latin1_bin NOT NULL,
+show_genre varchar(40) COLLATE latin1_bin NOT NULL,
+language varchar(30) COLLATE latin1_bin NOT NULL,
+numOfSeatsRemaning int COLLATE latin1_bin NOT NULL,
+child_price int COLLATE latin1_bin NOT NULL,
+adult_price int COLLATE latin1_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_bin;
+
+
+CREATE TABLE special_screening (
+adminID int COLLATE latin1_bin NOT NULL,
+showID int COLLATE latin1_bin NOT NULL,
+room_no int COLLATE latin1_bin NOT NULL,
+duration int COLLATE latin1_bin NOT NULL,
+show_name varchar(50) COLLATE latin1_bin NOT NULL,
+show_genre varchar(40) COLLATE latin1_bin NOT NULL,
+language varchar(30) COLLATE latin1_bin NOT NULL,
+start_time time COLLATE latin1_bin NOT NULL,
+price int COLLATE latin1_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_bin;
+
+CREATE TABLE booking( 
+bookingID int COLLATE latin1_bin NOT NULL,
+customerID int COLLATE latin1_bin NOT NULL,
+showID int COLLATE latin1_bin NOT NULL,
+start_time time COLLATE latin1_bin NOT NULL,
+no_children int COLLATE latin1_bin NOT NULL,
+no_adult int COLLATE latin1_bin NOT NULL,
+payment_status varchar(10) COLLATE latin1_bin NOT NULL,
+date_paid date COLLATE latin1_bin NOT NULL,
+total_price int COLLATE latin1_bin NOT NULL,
+reviewed varchar(5) COLLATE latin1_bin NOT NULL,
+issuedTickets int COLLATE latin1_bin NOT NULL
+
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_bin;
+
+
+
+ALTER TABLE admin
+  ADD PRIMARY KEY (adminID);
+  
+ALTER TABLE customer
+  ADD PRIMARY KEY (customerID);
+ 
+ ALTER TABLE booking
+  ADD PRIMARY KEY (bookingID);
+
+ ALTER TABLE movies
+  ADD PRIMARY KEY (showID);
+
+ ALTER TABLE special_screening
+  ADD PRIMARY KEY (showID);
+
+ALTER TABLE shows
+  ADD PRIMARY KEY (showID);
+
+ALTER TABLE reviews
+  ADD PRIMARY KEY (reviewID);
+
+
+
+ALTER TABLE shows
+MODIFY showID int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+ALTER TABLE admin
+MODIFY adminID int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+ALTER TABLE customer
+MODIFY customerID int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+ALTER TABLE reviews
+MODIFY reviewID int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+ALTER TABLE booking
+MODIFY bookingID int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+
+ALTER TABLE movies 
+ADD FOREIGN KEY(adminID) REFERENCES admin(adminID);
+
+ALTER TABLE shows
+ADD FOREIGN KEY(adminID) REFERENCES admin(adminID);
+
+ALTER TABLE booking
+ADD FOREIGN KEY(customerID) REFERENCES customer(customerID);
+
+ALTER TABLE special_screening 
+ADD FOREIGN KEY(adminID) REFERENCES admin(adminID);
+
+ALTER TABLE booking
+ADD FOREIGN KEY(showID) REFERENCES shows(showID);
+ 
+ALTER TABLE reviews 
+ADD FOREIGN KEY(showID) REFERENCES booking(showID),
+ADD FOREIGN KEY(adminID) REFERENCES admin(adminID),
+ADD FOREIGN KEY (customerID) REFERENCES booking(customerID);
+
+ALTER TABLE movies
+DROP COLUMN duration;
+
+ALTER TABLE movies
+DROP COLUMN show_name;
+
+ALTER TABLE movies
+DROP COLUMN show_genre;
+
+ALTER TABLE movies
+DROP COLUMN language;
+
+ALTER TABLE movies
+DROP COLUMN numOfSeatsRemaning;
+
+ALTER TABLE movies
+ADD seatsRemainingNight integer;
+
+ALTER TABLE movies
+ADD seatsRemainingDay integer;
+
+ALTER TABLE booking
+ADD viewing_date DATE;

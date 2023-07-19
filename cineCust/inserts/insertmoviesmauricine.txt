@@ -1,0 +1,2 @@
+INSERT INTO movies (adminID, showID, room_no, child_price, adult_price, seatsRemainingNight, seatsRemainingDay)
+VALUES (1, 52, 2, 250, 350, 30, 30);

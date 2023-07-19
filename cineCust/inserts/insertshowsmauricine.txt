@@ -1,0 +1,105 @@
+INSERT INTO shows 
+
+(adminID,showID,duration,show_name,show_genre,language,country,release_date,director,production_team,cast,start_date,end_date,
+imdb_rating,quality,show_desc,show_url,trailer_url,show_year)
+VALUES ('1','','127', 'Army of Thieves', 'Comedy, Action, Crime','French','United States, Germany','2021-10-29','Matthias 
+
+Schweighöfer','Pantaleon Films, The Stone Quarry, Film United','Ruby O Fee, Nathalie Emmanuel, Matthias Schweighouml, 
+
+fer','2022-03-30','2022-05-28', '6.4', 'HD', 'Six years before the apocalyptic events of Army of the Dead (2021), timid small-town bank teller Sebastian 
+
+leads a solitary, uneventful existence against the backdrop of an unheard-of virus outbreak in Las Vegas. Fascinated by locks and safes, the 
+
+enthusiastic YouTuber and theoretical safe-cracker will get the chance to shine when mysterious Gwendoline enlists his help to pull off the heist of the 
+
+century: crack a quartet of impenetrable, Richard Wagner-inspired safes. However, as Sebastian and Gwendoline s band of thieves embark on a 
+
+frenzied mission across Europe, obsessive Interpol agent Delacroix is hot on their trail, and things are starting to look bleak in Sin City. Now, in the face 
+
+of impossible odds, one man is about to write history. Is insecure Sebastian destined to become a legend? 
+
+','armyofthieves.png','https://www.youtube.com/watch?v=Ith2WetKXlg','2021'),
+
+       ('1','','101','Dog','Comedy','English','United states','2022-02-18','Reid Carolin,Channing Tatum','FilmNation Entertainment, Metro 
+
+Goldwyn Mayer MGM, CAA Media Finance','Channing Tatum, Emmy Raver Lampman, Qapos, orianka 
+
+Kilcher','2022-03-30','2022-05-28','6.5','HDR','Two former Army Rangers are paired against their will on the road trip of a lifetime. Army Ranger Briggs 
+
+(Channing Tatum) and Lulu (a Belgian Malinois dog) buckle into a 1984 Ford Bronco and race down the Pacific Coast in hopes of making it to a fellow 
+
+soldier s funeral on time. Along the way, they will drive each other completely crazy, break a small handful of laws, narrowly evade death, and learn to let 
+
+down their guards in order to have a fighting chance of finding happiness','dog.png','https://www.youtube.com/watch?v=V4tAtp-TyzQ','2022'),
+       ('1','','156','Eternals','Drama, Adventure, Action','French','United states','2022-11-05','Zhao','Marvel Studios','Gemma Chan, Angelina 
+
+Jolie, Richard Madden','2022-03-30','2022-05-28','6.4','3D','Following the events of Avengers: Endgame (2019), an unexpected tragedy forces the 
+
+Eternals, ancient aliens who have been living on Earth in secret for thousands of years, out of the shadows to reunite against mankind s most ancient 
+
+enemy, the Deviants.','eternals.png','https://www.youtube.com/watch?v=x_me3xsvDgk','2021'),
+       ('1','','115','Finch','Drama, Sci-Fi','English','United states','2021-11-05','Miguel Sapochnik','Apple Original Films, Amblin Partners, 
+
+Dutch Angle','Tom Hanks, Caleb Landry Jones, Lora Martinez Cunningham','2022-03-30','2022-05-28','6.9','4K','On a post-apocalyptic Earth, a robot, 
+
+built to protect the life of his creator s beloved dog learns about life, love, friendship and what it means to be 
+
+human.','finch.png','https://www.youtube.com/watch?v=-0bYWnP3jH4','2021'),
+       ('1','','105','Halloween Kills','Thriller, Crime, Horror','English','United States','2021-10-15','David Gordon Green','Universal Pictures, 
+
+Miramax','Judy Greer, Jamie Lee Curtis, Andi Matichak','2022-03-25','2022-03-28','5.6','HD','And the Halloween night when Michael Myers returned 
+
+is not over yet. Minutes after Laurie Strode (Curtis), her daughter Karen (Judy Greer) and granddaughter Allyson (Andi Matichak) left masked monster 
+
+Michael Myers caged and burning in Laurie s basement, Laurie is rushed to the hospital with life-threatening injuries, believing she finally killed her 
+
+lifelong tormentor. But when Michael manages to free himself from Laurie s trap, his ritual bloodbath resumes. As Laurie fights her pain and prepares 
+
+to defend herself against him, she inspires all of Haddonfield to rise up against their unstoppable monster. The Strode women join a group of other 
+
+survivors of Michael s first rampage who decide to take matters into their own hands, forming a vigilante mob that sets out to hunt Michael down, once 
+
+and for all. ','halloweenkills.png','https://www.youtube.com/watch?v=hL6R3HmQfPc','2021'),
+       ('1','','82','The Ice Age Adventures of Buck Wild','Animation, Comedy, Adventure', 'French', 'United States, Canada','2022-01-28','John 
+
+C. Donkin','20th Century Studios, Bardel Entertainment, Blue Sky Studios','Utkarsh Ambudkar, Jake Green, Sean 
+
+Kenin','2022-03-30','2022-05-28','4.6','4K','Desperate for some distance from their older sister Ellie, the thrill-seeking possum brothers Crash and Eddie 
+
+set out to find a place of their own, but quickly find themselves trapped in a massive cave underground. They are rescued by the one-eyed, adventure-
+
+loving, dinosaur-hunting weasel, Buck Wild, and together they must face the unruly dinosaurs who inhabit the Lost 
+
+World','iceageforever.png','https://www.youtube.com/watch?v=0U0L4uT0btQ','2022'),
+       ('1','','96','Jackass Forever','Comedy, Action, Documentary','English','United States','2022-04-02','Jeff Tremaine','MTV Entertainment 
+
+Studios, Gorilla Flicks','Johnny Knoxville, Steve O, Chris Pontius','2022-03-30','2022-05-28','7.2','8k','Celebrating the joy of being back together with 
+
+your best friends and a perfectly executed shot to the dingdong, the original jackass crew return for another round of hilarious, wildly absurd, and often 
+
+dangerous displays of comedy with a little help from some exciting new cast. Johnny and the team push the envelope even further in Jackass Forever. 
+
+','jackassforever.png','https://www.youtube.com/watch?v=FNq-QT2Jpng','2022'),
+       ('1','','131','The King s Man','Comedy, Adventure, Action','English','United States, United Kingdom','2021-12-22','Matthew 
+
+Vaughn','20th Century Studios, Marv Films, Marv Studios','Ralph Fiennes, Rhys Ifans, Gemma Arterton','2022-03-02','2022-03-29','6.3','4K','In the early years of the 20th century, the Kingsman agency is formed to stand against a cabal plotting a war to wipe out millions.','kingsman.png','https://www.youtube.com/watch?v=5zdBG-iGfes','2021'),
+       ('1','','163','James Bond 007:No Time to Die','Thriller, Adventure, Action','French','','2021-10-08','Cary Joji Fukunaga','Universal 
+
+Pictures, Metro Goldwyn Mayer MGM','Ana De Armas, Daniel Craig, Rami Malek','2022-03-30','2022-05-28','7.3','3D','Having left active service, 
+
+James Bond finally settles down and enjoys a tranquil life. But his peace is shortlived when he is approached by his old friend Felix Leiter for an 
+
+assignment to help recover a kidnapped scientist. Little does he realize is that his past is slowly catching up to him as the mission gets more dangerous 
+
+at every turn. James soon finds out that he must take on a mysterious new enemy who is determined to change the world in his 
+
+image.','notimetodie.png','https://www.youtube.com/watch?v=N_gD9-Oa0fg','2021'),
+('1','','97','Venom','Action','French','United States','2022-02-05','Andy Serkis','Columbia Pictures','Tom Holland Peter Parker,Tom HardyVenom,Woody HarrelsonCletus Kasady,Michelle WilliamsAnne Weying,Naomie HarrisShriek,Stephen Graham,Amber SiennaParty Guest,J.K. SimmonsJ. Jonah Jameson,Peggy LuMrs. Chen,Tom Hollander,Reid ScottDr. Dan Lewis,Little Simz','2022-04-01','2022-04-15','6.0','3D','Eddie Brock tries to revive his failing career by interviewing a serial killer, Cletus Kasady, who is on death row. When Carnage gains control over Cletuss body, he escapes from the prison.','venom.png','https://youtu.be/-FmWuCgJmxo','2022'),
+       ('1','','148','SpiderMan No Way Home','Adventure','English','United States','2022-03-20','Jon Watts','Marvel','Tom HollandSpider-Man,Tobey MaguireSpider-Man, Peter Parker,ZendayaMichelle MJ Jones,Andrew GarfieldSpider-Man,Marisa TomeiAunt May,,Willem DafoeNorman Osborn,Jacob BatalonNed Leeds','2022-03-30','2022-05-15','8.5','3D','With Spider-Mans identity now revealed, our friendly neighborhood web-slinger is unmasked and no longer able to separate his normal life as Peter Parker from the high stakes of being a superhero. When Peter asks for help from Doctor Strange, the stakes become even more dangerous, forcing him to discover what it truly means to be SpiderMan.','sipdermannoway.png','https://youtu.be/JfVOs4VSpmA','2022'),
+       ('1','','132','SangChi','Fantasy','English','china','2022-03-15','Destin Daniel Cretton','Marvel','Simu LiuShang-Chi,AwkwafinaKaty,Tony Leung Chiu-waiXu Wenwu,Michelle YeoJiang Nan,Menger ZhangXialing,Ben KingsleyTrevor Slattery,Fala ChenYing Li','2022-03-25','2022-05-25','7.5','2D','Martial-arts master Shang-Chi confronts the past he thought he left behind when hes drawn into the web of the mysterious Ten Rings organization.','sangchi.png','https://youtu.be/8YjFbMbfXaQ','2022'),
+       ('1','','95','rumble','Comedy','French','United States','2021-12-15','Hamish Grieve','Paramount Animation','Roman ReignsRamarilla Jackson,Becky LynchAxehammer,Will ArnettSteve,Geraldine ViswanathanWinnie Coyle,Terry CrewsTentacular,Jimmy TatroJimmy Tatro,Ben SchwartzJimothy Brett-Chadley III','2021-12-30','2022-02-10','5.9','2D','In a world where monsters are tame and monster wrestling is a popular sport, Winnie seeks to follow in her fathers footsteps as a manager by turning an inexperienced monster into a contender.','rumble.png','https://youtu.be/h3zG5OLexjg','2021'),
+       ('1','','107','Resident Evil:Welcome to Raccoon City','Horror','English','Japan','2021-11-25',' Paul W. S. Anderson, Alexander Witt, Russell Mulcahy','Capcom, Constantin Film, Screen Gems, MORE','Kaya ScodelarioClaire Redfield,Avan JogiaLeon S. Kennedy,Hannah John-KamenJill Valentine,Robbie AmellChris Redfield,Tom HopperAlbert Wesker,Lily GaoAda Wong,Stephannie HawkinsSickly Mom','2021-12-10','2022-02-12','5.2','3D','Welcome to Raccoon City, once the booming home of pharmaceutical giant Umbrella Corp. The companys exodus left the city a wasteland, a dying town with great evil brewing below the surface. When that evil is unleashed, a group of survivors must work together to uncover the truth behind Umbrella and make it through the night.','residentevil.png','https://youtu.be/4q6UGCyHZCI','2021'),
+       ('1','','107','Red Notice','Action','English','United States','2021-11-04','Rawson Marshall Thurber','Netflix','Dwayne JohnsonJohn Hartley,Ryan ReynoldsNolan Booth,Gal GadotWorlds greatest art thief,Ritu AryaInspector Urvashi Das,Chris Diamantopoulo ,Sotto Voce,Melissa KennemoreBali SWAT team #1,MWW Michael WilkersonBig Russian Pri','2021-11-15','2022-01-02','6.4','3D','In the world of international crime, an Interpol agent attempts to hunt down and capture the worlds most wanted art thief.','rednotice.png','https://youtu.be/Pj0wz7zu3Ms','2021'),    
+       ('1','','148','The Matrix Resurrections','Action','English','Australia','2021-12-22',' Lana Wachowski','Warner Bros. Pictures, Village Roadshow Pictures, Venus Castina Productions','Keanu ReevesNeo,Jada Pinkett SmithNiobe,Laurence FishburneMorpheus,Jessica HenwickBugs,Carrie-Anne MossTrinity,Priyanka ChopraSati,Christina RicciGwyn de Vere','2022-01-02','2022-03-03','5.7','3D','Thomas Andersons seemingly ordinary life ends when he accepts Morpheuss offer, only to wake up to a new, more secure and much more dangerous Matrix.','martixresurrection.png','https://youtu.be/9ix7TUGVYIo','2021'),
+       ('1','','158','House of Gucci','Drama','English','Italy','2021-11-24','Ridley Scott',' Metro-Goldwyn-Mayer, Universal Pictures','Jared LetoPaolo Gucci,Lady GagaPatrizia Reggiani,Adam DriverMaurizio Gucci,Al PacinoAldo Gucci,Salma HayekGiuseppina "Pina" Auriemma,Camille Cottin,Paola Franchi','2021-12-07','2022-02-07','6.7','2D','When Patrizia Reggiani, an outsider from humble beginnings, marries into the Gucci family, her unbridled ambition begins to unravel the family legacy and triggers a reckless spiral of betrayal, decadence, revenge -- and ultimately murder.','houseofgucci.png','https://youtu.be/pGi3Bgn7U5U','2021'),
+       ('1','','200','Harry Potter','Mystery','French','United Kingdom','2022-01-01',' Casey Patterson, Eran Creevy, Joe Pearlman, Giorgio Testi',' Bill DeRonde, Jim Clark, Asaf Eisenberg, Simon Bryant','Daniel RadcliffeEmma Watson,Rupert Grint,Tom Felton','2022-01-20','2022-02-20','8.0','3D','The cast from the film series Harry Potter reunite and embark on a journey down memory lane with nostalgic conversations while celebrating 20 years since the first film.','harrypotter','https://youtu.be/fFGS4zZWGoA','2022');

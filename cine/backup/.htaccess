@@ -1,0 +1,22 @@
+# Turn rewrite engine on
+#https://code.tutsplus.com/tutorials/using-htaccess-files-for-pretty-urls--net-6049
+
+
+Options +FollowSymlinks
+RewriteEngine on
+#RewriteCond %{SCRIPT_FILENAME} !-d
+#RewriteCond %{SCRIPT_FILENAME} !-f
+#Options -MultiViews
+
+# map neat URL to internal URL
+RewriteRule ^customer/list/$   RestController.php?resource=customer&page_key=list [nc,qsa]
+RewriteRule ^customer/list$   RestController.php?resource=customer&page_key=list [nc,qsa]
+
+RewriteRule ^customer/create/$   RestController.php?resource=customer&page_key=create [nc,qsa]
+RewriteRule ^customer/create$   RestController.php?resource=customer&page_key=create [nc,qsa]
+
+RewriteRule ^customer/delete/([0-9]+)/$   RestController.php?resource=customer&page_key=delete&id=$1 [nc,qsa]
+RewriteRule ^customer/delete/([0-9]+)$   RestController.php?resource=customer&page_key=delete&id=$1 [nc,qsa]
+
+RewriteRule ^customer/update/([0-9]+)/$   RestController.php?resource=customer&page_key=update&id=$1 [nc,qsa]
+RewriteRule ^customer/update/([0-9]+)$   RestController.php?resource=customer&page_key=update&id=$1 [nc,qsa]
